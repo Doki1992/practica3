@@ -32,11 +32,8 @@ class UserP extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     public function rules()
     {
         return [
-            [['idUserP'], 'required'],
-            [['idUserP'], 'integer'],
-            [['username', 'password', 'authKey', 'mail', 'alias'], 'string', 'max' => 45],
+            [['username', 'password', /*'authKey',*/ 'mail', 'alias'], 'string', 'max' => 45],
             [['username'], 'unique'],
-            [['idUserP'], 'unique'],
         ];
     }
 
@@ -49,7 +46,7 @@ class UserP extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
             'idUserP' => 'Id User P',
             'username' => 'Username',
             'password' => 'Password',
-            'authKey' => 'Auth Key',
+            /*'authKey' => 'Auth Key',*/    
             'mail' => 'Mail',
             'alias' => 'Alias',
         ];
@@ -63,38 +60,41 @@ class UserP extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         return $this->hasMany(Cuenta::className(), ['IdUser' => 'idUserP']);
     }
 
-       public static function findIdentity($id) 
-                    { 
-                        return self::findOne($id); 
-                    } 
-                   
-                    public function validatePassword($password) 
-                    { 
-                        return $this->password === $password; 
-                    } 
-                   
-                    public static function findByUserName($name) 
-                    { 
-                        return new static(self::findOne(['username' => $name])); 
-                    } 
-                   
-                    public static function findIdentityByAccessToken($token, $type = null) 
-                    { 
-                        throw new NotSupportedException();       
-                    } 
-                   
-                    public function getId() 
-                    { 
-                        return $this->idUserP; 
-                    } 
-                   
-                    public function getAuthKey() 
-                    { 
-                        return $this->authKey; 
-                    } 
-                   
-                    public function validateAuthKey($authKey) 
-                    { 
-                        return $this->authKey === $authKey; 
-                    } 
+    public function validateCodigo($codigo){
+      return $this->authKey === $codigo;
+    }
+    public static function findIdentity($id)  
+                           {  
+                               return self::findOne($id);  
+                           }  
+                           
+                           public function validatePassword($password)  
+                           {  
+                               return $this->password === $password;  
+                           }  
+                           
+                           public static function findByUserName($name)  
+                           {  
+                               return new static(self::findOne(['username' => $name]));  
+                           }  
+                           
+                           public static function findIdentityByAccessToken($token, $type = null)  
+                           {  
+                               throw new NotSupportedException();       
+                           }  
+                           
+                           public function getId()  
+                           {  
+                               return $this->idUserP;  
+                           }  
+                           
+                           public function getAuthKey()  
+                           {  
+                               return $this->authKey;  
+                           }  
+                           
+                           public function validateAuthKey($authKey)  
+                           {  
+                               return $this->authKey === $authKey;  
+                           }  
 }

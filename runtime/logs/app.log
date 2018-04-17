@@ -1,0 +1,2674 @@
+2018-04-17 00:00:31 [127.0.0.1][-][os7udj0n04pe2niohobprgp4i7][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /var/www/basic/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', 'zully1990', NULL)
+#1 /var/www/basic/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /var/www/basic/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /var/www/basic/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /var/www/basic/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /var/www/basic/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare('<span class="ke...')
+#6 /var/www/basic/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 /var/www/basic/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /var/www/basic/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /var/www/basic/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#10 /var/www/basic/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('<span class="st...', '<span class="st...', '<span class="ke...')
+#11 /var/www/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(384): yii\db\Schema->getTableSchema('<span class="st...')
+#12 /var/www/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(418): yii\db\ActiveRecord::getTableSchema()
+#13 /var/www/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(492): yii\db\ActiveRecord->attributes()
+#14 /var/www/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(289): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#15 /var/www/basic/vendor/yiisoft/yii2/helpers/BaseHtml.php(2193): yii\db\BaseActiveRecord->__get('<span class="st...')
+#16 /var/www/basic/vendor/yiisoft/yii2/helpers/BaseHtml.php(1323): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\UserP), '<span class="st...')
+#17 /var/www/basic/vendor/yiisoft/yii2/helpers/BaseHtml.php(1377): yii\helpers\BaseHtml::activeInput('<span class="st...', Object(app\models\UserP), '<span class="st...', '[<span class="s...')
+#18 /var/www/basic/vendor/yiisoft/yii2/widgets/ActiveField.php(404): yii\helpers\BaseHtml::activeTextInput(Object(app\models\UserP), '<span class="st...', '[<span class="s...')
+#19 /var/www/basic/views/user-p/_form.php(15): yii\widgets\ActiveField->textInput()
+#20 /var/www/basic/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/basic/...')
+#21 /var/www/basic/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#22 /var/www/basic/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('<span class="st...', '[<span class="s...', '<span class="ke...')
+#23 /var/www/basic/views/user-p/create.php(19): yii\base\View->render('<span class="st...', '[<span class="s...')
+#24 /var/www/basic/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/basic/...')
+#25 /var/www/basic/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#26 /var/www/basic/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(app\controllers\UserPController))
+#27 /var/www/basic/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('<span class="st...', '[<span class="s...', Object(app\controllers\UserPController))
+#28 /var/www/basic/controllers/UserPController.php(75): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#29 [internal function]: app\controllers\UserPController->actionCreate()
+#30 /var/www/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#31 /var/www/basic/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#32 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#33 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#34 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#35 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#36 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /var/www/basic/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /var/www/basic/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /var/www/basic/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /var/www/basic/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare('<span class="ke...')
+#4 /var/www/basic/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 /var/www/basic/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /var/www/basic/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /var/www/basic/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#8 /var/www/basic/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('<span class="st...', '<span class="st...', '<span class="ke...')
+#9 /var/www/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(384): yii\db\Schema->getTableSchema('<span class="st...')
+#10 /var/www/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(418): yii\db\ActiveRecord::getTableSchema()
+#11 /var/www/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(492): yii\db\ActiveRecord->attributes()
+#12 /var/www/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(289): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#13 /var/www/basic/vendor/yiisoft/yii2/helpers/BaseHtml.php(2193): yii\db\BaseActiveRecord->__get('<span class="st...')
+#14 /var/www/basic/vendor/yiisoft/yii2/helpers/BaseHtml.php(1323): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\UserP), '<span class="st...')
+#15 /var/www/basic/vendor/yiisoft/yii2/helpers/BaseHtml.php(1377): yii\helpers\BaseHtml::activeInput('<span class="st...', Object(app\models\UserP), '<span class="st...', '[<span class="s...')
+#16 /var/www/basic/vendor/yiisoft/yii2/widgets/ActiveField.php(404): yii\helpers\BaseHtml::activeTextInput(Object(app\models\UserP), '<span class="st...', '[<span class="s...')
+#17 /var/www/basic/views/user-p/_form.php(15): yii\widgets\ActiveField->textInput()
+#18 /var/www/basic/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/basic/...')
+#19 /var/www/basic/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#20 /var/www/basic/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('<span class="st...', '[<span class="s...', '<span class="ke...')
+#21 /var/www/basic/views/user-p/create.php(19): yii\base\View->render('<span class="st...', '[<span class="s...')
+#22 /var/www/basic/vendor/yiisoft/yii2/base/View.php(336): require('/var/www/basic/...')
+#23 /var/www/basic/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#24 /var/www/basic/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(app\controllers\UserPController))
+#25 /var/www/basic/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('<span class="st...', '[<span class="s...', Object(app\controllers\UserPController))
+#26 /var/www/basic/controllers/UserPController.php(75): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#27 [internal function]: app\controllers\UserPController->actionCreate()
+#28 /var/www/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#29 /var/www/basic/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#30 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#31 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#32 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#34 {main}
+Additional Information:
+
+2018-04-17 00:00:29 [127.0.0.1][-][os7udj0n04pe2niohobprgp4i7][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '__tad' => '1523838626.7508831'
+    'PHPSESSID' => 'os7udj0n04pe2niohobprgp4i7'
+    '_csrf' => 'dd8e90a3d8f8436589c8ac2f013c9fd763a55dcff3dcd01bed47951ff6c7c1b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"G9lN0okh1yt36m2a1gU5sZvCHYjJYwP5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.practica.com/'
+    'HTTP_COOKIE' => '__tad=1523838626.7508831; PHPSESSID=os7udj0n04pe2niohobprgp4i7; _csrf=dd8e90a3d8f8436589c8ac2f013c9fd763a55dcff3dcd01bed47951ff6c7c1b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22G9lN0okh1yt36m2a1gU5sZvCHYjJYwP5%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55127'
+    'REDIRECT_URL' => '/user-p/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-p/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523923229.205
+    'REQUEST_TIME' => 1523923229
+]
+2018-04-17 00:12:39 [127.0.0.1][3][vst8ucpj5d7o7i82r9lo8jnph1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in /var/www/basic/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('login', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:12:39 [127.0.0.1][3][vst8ucpj5d7o7i82r9lo8jnph1][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '__tad' => '1523838626.7508831'
+    'PHPSESSID' => 'vst8ucpj5d7o7i82r9lo8jnph1'
+    '_csrf' => '1c621fffe495c63223a231d179270a1a9b55169f9a2dc25be52daeab4c30dca7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GaAca25u_jQdq6v-J1AVtOIwpIREQt8W\";}'
+    '_identity' => '57e6afbcb0704d13cab527a87d2c94d0aee2b93e7de46dba0d8d5637b9c78f36a:2:{i:0;s:9:\"_identity\";i:1;s:20:\"[3,\"234rfr\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '__tad=1523838626.7508831; PHPSESSID=vst8ucpj5d7o7i82r9lo8jnph1; _csrf=1c621fffe495c63223a231d179270a1a9b55169f9a2dc25be52daeab4c30dca7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GaAca25u_jQdq6v-J1AVtOIwpIREQt8W%22%3B%7D; _identity=57e6afbcb0704d13cab527a87d2c94d0aee2b93e7de46dba0d8d5637b9c78f36a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A20%3A%22%5B3%2C%22234rfr%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55164'
+    'REDIRECT_URL' => '/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523923959.561
+    'REQUEST_TIME' => 1523923959
+]
+2018-04-17 00:28:02 [127.0.0.1][-][eklc3rjqjn9rkh1t8nu6aqpmd7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:55 [127.0.0.1][-][eklc3rjqjn9rkh1t8nu6aqpmd7][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55200'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924869.735
+    'REQUEST_TIME' => 1523924869
+]
+2018-04-17 00:28:02 [127.0.0.1][-][arbc9ccqth6mh7emlmtpa1d9n0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:57 [127.0.0.1][-][arbc9ccqth6mh7emlmtpa1d9n0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55201'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924869.59
+    'REQUEST_TIME' => 1523924869
+]
+2018-04-17 00:27:58 [127.0.0.1][-][qr9tfv1mjsu9s6f0qquoh9aqt7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:50 [127.0.0.1][-][qr9tfv1mjsu9s6f0qquoh9aqt7][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55202'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924870.001
+    'REQUEST_TIME' => 1523924870
+]
+2018-04-17 00:27:58 [127.0.0.1][-][98ut6s8jngbn37j6k25f7me0m4][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:52 [127.0.0.1][-][98ut6s8jngbn37j6k25f7me0m4][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55207'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924872.306
+    'REQUEST_TIME' => 1523924872
+]
+2018-04-17 00:28:02 [127.0.0.1][-][e02al0og2u3bcq5v1ucdrinls3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:55 [127.0.0.1][-][e02al0og2u3bcq5v1ucdrinls3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55198'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924869.105
+    'REQUEST_TIME' => 1523924869
+]
+2018-04-17 00:27:58 [127.0.0.1][-][4ve28rrcl5qlp7tbonh6kgu463][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:52 [127.0.0.1][-][4ve28rrcl5qlp7tbonh6kgu463][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55205'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924871.404
+    'REQUEST_TIME' => 1523924871
+]
+2018-04-17 00:27:58 [127.0.0.1][-][msrhneqlo5c7r6k300ctpo85b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:54 [127.0.0.1][-][msrhneqlo5c7r6k300ctpo85b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55211'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924874.815
+    'REQUEST_TIME' => 1523924874
+]
+2018-04-17 00:27:58 [127.0.0.1][-][5jq5stk3sous69i2mukv6lfqi0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:52 [127.0.0.1][-][5jq5stk3sous69i2mukv6lfqi0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55208'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924872.804
+    'REQUEST_TIME' => 1523924872
+]
+2018-04-17 00:27:58 [127.0.0.1][-][qldtps8q7t9qoq0plnirek63d0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:49 [127.0.0.1][-][qldtps8q7t9qoq0plnirek63d0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55195'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924866.469
+    'REQUEST_TIME' => 1523924866
+]
+2018-04-17 00:27:58 [127.0.0.1][-][f56dqq0m8ea5qg98mojj5a8rv5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:54 [127.0.0.1][-][f56dqq0m8ea5qg98mojj5a8rv5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55210'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924874.827
+    'REQUEST_TIME' => 1523924874
+]
+2018-04-17 00:27:58 [127.0.0.1][-][ifd33f0i60rrs51papah96un21][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:52 [127.0.0.1][-][ifd33f0i60rrs51papah96un21][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55204'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924870.832
+    'REQUEST_TIME' => 1523924870
+]
+2018-04-17 00:27:58 [127.0.0.1][-][d9qb605emb0sc7suivpoa81ju6][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:54 [127.0.0.1][-][d9qb605emb0sc7suivpoa81ju6][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55209'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924874.79
+    'REQUEST_TIME' => 1523924874
+]
+2018-04-17 00:27:58 [127.0.0.1][-][9iv7r1nc3j02poo20p71s0ebv4][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:52 [127.0.0.1][-][9iv7r1nc3j02poo20p71s0ebv4][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55206'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924871.81
+    'REQUEST_TIME' => 1523924871
+]
+2018-04-17 00:27:59 [127.0.0.1][-][mj263r0nttnqaiukrb66vnruu7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:49 [127.0.0.1][-][mj263r0nttnqaiukrb66vnruu7][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55197'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924867.461
+    'REQUEST_TIME' => 1523924867
+]
+2018-04-17 00:28:00 [127.0.0.1][-][0qchbmk1iqvn2d1c9u99mc8fq2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:49 [127.0.0.1][-][0qchbmk1iqvn2d1c9u99mc8fq2][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55194'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924865.411
+    'REQUEST_TIME' => 1523924865
+]
+2018-04-17 00:27:58 [127.0.0.1][-][fi7a8e1sseg14kaio8p9rhud82][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:52 [127.0.0.1][-][fi7a8e1sseg14kaio8p9rhud82][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55203'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924870.831
+    'REQUEST_TIME' => 1523924870
+]
+2018-04-17 00:27:58 [127.0.0.1][-][on83k8nbrtldolo9bm1mpvg2t0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:49 [127.0.0.1][-][on83k8nbrtldolo9bm1mpvg2t0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55193'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924865.108
+    'REQUEST_TIME' => 1523924865
+]
+2018-04-17 00:27:58 [127.0.0.1][-][onuussdkoqk090up48iinht1u1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:54 [127.0.0.1][-][onuussdkoqk090up48iinht1u1][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55212'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924874.833
+    'REQUEST_TIME' => 1523924874
+]
+2018-04-17 00:27:58 [127.0.0.1][-][fouq28meo2nlgdg3k5gi39knq0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:49 [127.0.0.1][-][fouq28meo2nlgdg3k5gi39knq0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55196'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924866.993
+    'REQUEST_TIME' => 1523924866
+]
+2018-04-17 00:28:01 [127.0.0.1][-][sk06r3jbgv4ac4893m0d4ct8b2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:27:52 [127.0.0.1][-][sk06r3jbgv4ac4893m0d4ct8b2][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55199'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924869.48
+    'REQUEST_TIME' => 1523924869
+]
+2018-04-17 00:28:31 [127.0.0.1][-][v54pqcocm03m0ssh9jrl3ov9v0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:28:31 [127.0.0.1][-][v54pqcocm03m0ssh9jrl3ov9v0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '__tad' => '1523838626.7508831'
+    'PHPSESSID' => 'v54pqcocm03m0ssh9jrl3ov9v0'
+    '_csrf' => '1c621fffe495c63223a231d179270a1a9b55169f9a2dc25be52daeab4c30dca7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"GaAca25u_jQdq6v-J1AVtOIwpIREQt8W\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '__tad=1523838626.7508831; PHPSESSID=v54pqcocm03m0ssh9jrl3ov9v0; _csrf=1c621fffe495c63223a231d179270a1a9b55169f9a2dc25be52daeab4c30dca7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22GaAca25u_jQdq6v-J1AVtOIwpIREQt8W%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55228'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924911.4
+    'REQUEST_TIME' => 1523924911
+]
+2018-04-17 00:29:09 [127.0.0.1][-][0dauarcb5ikqesmldf1u19ne25][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:09 [127.0.0.1][-][0dauarcb5ikqesmldf1u19ne25][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55233'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924949.674
+    'REQUEST_TIME' => 1523924949
+]
+2018-04-17 00:29:10 [127.0.0.1][-][ei5nlijblvlhammg0ulcrtpk52][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:10 [127.0.0.1][-][ei5nlijblvlhammg0ulcrtpk52][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55234'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924950.191
+    'REQUEST_TIME' => 1523924950
+]
+2018-04-17 00:29:10 [127.0.0.1][-][bc5irrtupuvfb86ns8g4tbi9b3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:10 [127.0.0.1][-][bc5irrtupuvfb86ns8g4tbi9b3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55235'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924950.675
+    'REQUEST_TIME' => 1523924950
+]
+2018-04-17 00:29:11 [127.0.0.1][-][h5c9u0g2mdpocners7s9toktv7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:11 [127.0.0.1][-][h5c9u0g2mdpocners7s9toktv7][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55236'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924951.177
+    'REQUEST_TIME' => 1523924951
+]
+2018-04-17 00:29:11 [127.0.0.1][-][52d7kb40hivph383e7jektmds0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:11 [127.0.0.1][-][52d7kb40hivph383e7jektmds0][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55237'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924951.719
+    'REQUEST_TIME' => 1523924951
+]
+2018-04-17 00:29:12 [127.0.0.1][-][ubamjh9v8omtvvpo56mg6n7iq4][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:12 [127.0.0.1][-][ubamjh9v8omtvvpo56mg6n7iq4][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55238'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924952.218
+    'REQUEST_TIME' => 1523924952
+]
+2018-04-17 00:29:12 [127.0.0.1][-][1p7pop4ojsol3imok00od5bup7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:12 [127.0.0.1][-][1p7pop4ojsol3imok00od5bup7][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55239'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924952.731
+    'REQUEST_TIME' => 1523924952
+]
+2018-04-17 00:29:13 [127.0.0.1][-][ubagtn9ibfjfhdot1m6gj5fge3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:13 [127.0.0.1][-][ubagtn9ibfjfhdot1m6gj5fge3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55240'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924953.239
+    'REQUEST_TIME' => 1523924953
+]
+2018-04-17 00:29:13 [127.0.0.1][-][9l7c8objbusjqbbdta5pkae915][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:13 [127.0.0.1][-][9l7c8objbusjqbbdta5pkae915][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55241'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924953.745
+    'REQUEST_TIME' => 1523924953
+]
+2018-04-17 00:29:14 [127.0.0.1][-][95uap00nb84ephgf8pied44ig2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:14 [127.0.0.1][-][95uap00nb84ephgf8pied44ig2][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55242'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924954.268
+    'REQUEST_TIME' => 1523924954
+]
+2018-04-17 00:29:14 [127.0.0.1][-][hn2187lbk1d8cab6hfsilash35][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:14 [127.0.0.1][-][hn2187lbk1d8cab6hfsilash35][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55243'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924954.732
+    'REQUEST_TIME' => 1523924954
+]
+2018-04-17 00:29:15 [127.0.0.1][-][bgkjkpb16fdc87jscqad5o7ic1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:15 [127.0.0.1][-][bgkjkpb16fdc87jscqad5o7ic1][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55244'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924955.255
+    'REQUEST_TIME' => 1523924955
+]
+2018-04-17 00:29:15 [127.0.0.1][-][pn7d3ek0vj9vvgsp3ghdclejt7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:15 [127.0.0.1][-][pn7d3ek0vj9vvgsp3ghdclejt7][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55245'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924955.756
+    'REQUEST_TIME' => 1523924955
+]
+2018-04-17 00:29:16 [127.0.0.1][-][1j3m0hi0m8is1avko4fvgqttf5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:16 [127.0.0.1][-][1j3m0hi0m8is1avko4fvgqttf5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55246'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924956.263
+    'REQUEST_TIME' => 1523924956
+]
+2018-04-17 00:29:16 [127.0.0.1][-][av9b14qhsv1n7dor478hl6s541][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:16 [127.0.0.1][-][av9b14qhsv1n7dor478hl6s541][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55247'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924956.761
+    'REQUEST_TIME' => 1523924956
+]
+2018-04-17 00:29:17 [127.0.0.1][-][7pohpc8ho871ckdvadgkc14f67][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:17 [127.0.0.1][-][7pohpc8ho871ckdvadgkc14f67][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55248'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924957.282
+    'REQUEST_TIME' => 1523924957
+]
+2018-04-17 00:29:17 [127.0.0.1][-][bchm3fglt1t9fu5iauc4hav4v4][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:17 [127.0.0.1][-][bchm3fglt1t9fu5iauc4hav4v4][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55249'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924957.811
+    'REQUEST_TIME' => 1523924957
+]
+2018-04-17 00:29:18 [127.0.0.1][-][ekpitakn37n2aukv456equkuk6][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:18 [127.0.0.1][-][ekpitakn37n2aukv456equkuk6][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55250'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924958.311
+    'REQUEST_TIME' => 1523924958
+]
+2018-04-17 00:29:18 [127.0.0.1][-][611ndla6i2gok0a5l1rfgdbk16][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:18 [127.0.0.1][-][611ndla6i2gok0a5l1rfgdbk16][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55251'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924958.822
+    'REQUEST_TIME' => 1523924958
+]
+2018-04-17 00:29:19 [127.0.0.1][-][q0lvcaiv2dpo3sspiuvarkojo3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/login3' in /var/www/basic/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login3', Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login3', Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/basic/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-04-17 00:29:19 [127.0.0.1][-][q0lvcaiv2dpo3sspiuvarkojo3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Apache-HttpClient/4.5.5 (Java/1.8.0_161)'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55252'
+    'REDIRECT_URL' => '/site/login3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523924959.372
+    'REQUEST_TIME' => 1523924959
+]
+2018-04-17 01:32:33 [127.0.0.1][-][rma0en30dg11308cv742ai6em6][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: id' in /var/www/basic/vendor/yiisoft/yii2/web/Controller.php:149
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /var/www/basic/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('view', Array)
+#3 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user-p/view', Array)
+#4 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#6 {main}
+2018-04-17 01:32:33 [127.0.0.1][-][rma0en30dg11308cv742ai6em6][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '__tad' => '1523838626.7508831'
+    'PHPSESSID' => 'rma0en30dg11308cv742ai6em6'
+    '_csrf' => '10fba062b776cdf103a282619b2afbe2058e912474116aef3d9c0b1f9302a5e3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iN9RLZZx1OaR4EL7jLR-X1KdUQc5v5E1\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.practica.com/user-p/create'
+    'HTTP_COOKIE' => '__tad=1523838626.7508831; PHPSESSID=rma0en30dg11308cv742ai6em6; _csrf=10fba062b776cdf103a282619b2afbe2058e912474116aef3d9c0b1f9302a5e3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iN9RLZZx1OaR4EL7jLR-X1KdUQc5v5E1%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55751'
+    'REDIRECT_URL' => '/user-p/view'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-p/view'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523928753.785
+    'REQUEST_TIME' => 1523928753
+]
+2018-04-17 01:34:37 [127.0.0.1][-][rma0en30dg11308cv742ai6em6][error][yii\db\IntegrityException] exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in /var/www/basic/vendor/yiisoft/yii2/db/Command.php:1258
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/db/Command.php(1258): PDOStatement->execute()
+#1 /var/www/basic/vendor/yiisoft/yii2/db/Command.php(1075): yii\db\Command->internalExecute('<span class="st...')
+#2 /var/www/basic/vendor/yiisoft/yii2/db/Schema.php(433): yii\db\Command->execute()
+#3 /var/www/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(549): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#4 /var/www/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(515): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#5 /var/www/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#6 /var/www/basic/controllers/UserPController.php(71): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\UserPController->actionCreate()
+#8 /var/www/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 /var/www/basic/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#10 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#12 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\IntegrityException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+The SQL being executed was: INSERT INTO `UserP` (`authKey`, `username`, `password`, `mail`, `alias`) VALUES ('27742', 'oscar', 'oscar', 'oscar@gmail.com', 'os')' in /var/www/basic/vendor/yiisoft/yii2/db/Schema.php:664
+Stack trace:
+#0 /var/www/basic/vendor/yiisoft/yii2/db/Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `Us...')
+#1 /var/www/basic/vendor/yiisoft/yii2/db/Command.php(1075): yii\db\Command->internalExecute('<span class="st...')
+#2 /var/www/basic/vendor/yiisoft/yii2/db/Schema.php(433): yii\db\Command->execute()
+#3 /var/www/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(549): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#4 /var/www/basic/vendor/yiisoft/yii2/db/ActiveRecord.php(515): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#5 /var/www/basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#6 /var/www/basic/controllers/UserPController.php(71): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\UserPController->actionCreate()
+#8 /var/www/basic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#9 /var/www/basic/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[]')
+#10 /var/www/basic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 /var/www/basic/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[]')
+#12 /var/www/basic/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/basic/web/index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry '0' for key 'PRIMARY'
+)
+
+2018-04-17 01:34:37 [127.0.0.1][-][rma0en30dg11308cv742ai6em6][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => '6hUplNL3DIHijr7u0wZ8muiWecW6Hen2m0ZLkoE1ozyDWxDGnq1W-dPB37znQzCtgtor6OIsopLOFyin9wDmDQ=='
+    'UserP' => [
+        'idUserP' => '5'
+        'username' => 'oscar'
+        'password' => 'oscar'
+        'authKey' => '90344'
+        'mail' => 'oscar@gmail.com'
+        'alias' => 'os'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '__tad' => '1523838626.7508831'
+    'PHPSESSID' => 'rma0en30dg11308cv742ai6em6'
+    '_csrf' => '10fba062b776cdf103a282619b2afbe2058e912474116aef3d9c0b1f9302a5e3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iN9RLZZx1OaR4EL7jLR-X1KdUQc5v5E1\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.practica.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.practica.com/user-p/create'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '250'
+    'HTTP_COOKIE' => '__tad=1523838626.7508831; PHPSESSID=rma0en30dg11308cv742ai6em6; _csrf=10fba062b776cdf103a282619b2afbe2058e912474116aef3d9c0b1f9302a5e3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iN9RLZZx1OaR4EL7jLR-X1KdUQc5v5E1%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at www.practica.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'www.practica.com'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/basic/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/basic/web'
+    'SERVER_ADMIN' => 'avilatorresics@gmail.com'
+    'SCRIPT_FILENAME' => '/var/www/basic/web/index.php'
+    'REMOTE_PORT' => '55759'
+    'REDIRECT_URL' => '/user-p/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user-p/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1523928877.607
+    'REQUEST_TIME' => 1523928877
+]

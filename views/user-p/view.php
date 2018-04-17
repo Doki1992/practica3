@@ -36,5 +36,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'alias',
         ],
     ]) ?>
-
+    <h1 style='color: red'>codigo de usuario</h1>
+    <h1 style='color: red'><?= $code ?></h1>
 </div>

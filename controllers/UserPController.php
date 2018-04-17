@@ -12,7 +12,7 @@ use yii\filters\VerbFilter;
 /**
  * UserPController implements the CRUD actions for UserP model.
  */
-class UserPController extends Controller
+class UserPController extends Controller 
 {
     /**
      * @inheritdoc
@@ -52,8 +52,10 @@ class UserPController extends Controller
      */
     public function actionView($id)
     {
+        $model = $this->findModel($id);
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
+            'code' => $model->authKey,
         ]);
     }
 
@@ -65,7 +67,7 @@ class UserPController extends Controller
     public function actionCreate()
     {
         $model = new UserP();
-
+        $model->authKey =  rand (0 , 100000);
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idUserP]);
         }
@@ -124,4 +126,5 @@ class UserPController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
 }
