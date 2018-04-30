@@ -191,6 +191,7 @@ class ComposerStaticInitca92174f94924455cc80624f2ab12859
         array (
             0 => __DIR__ . '/..' . '/codeception/base/src/Codeception',
             1 => __DIR__ . '/..' . '/codeception/stub/src',
+            2 => __DIR__ . '/..' . '/codeception/verify/src/Codeception',
         ),
     );
 

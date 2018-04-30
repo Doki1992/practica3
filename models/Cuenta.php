@@ -67,5 +67,10 @@ class Cuenta extends \yii\db\ActiveRecord
     public static function findByAccount($account)
     {
         return self::findOne(['idCuenta' => $account]);
-    }        
+    } 
+
+	public function getId()
+    {
+        return $this->idCuenta;
+    }       
 }
