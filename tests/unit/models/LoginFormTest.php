@@ -36,16 +36,6 @@ class LoginFormTest extends \Codeception\Test\Unit
         expect($this->model->errors)->hasKey('password');
     }
 
-    public function testLoginCorrect()
-    {
-        $this->model = new LoginForm([
-            'username' => 'duglas',
-            'password' => 'duglas',
-        ]);
 
-        expect_that($this->model->login());
-        expect_not(\Yii::$app->user->isGuest);
-        expect($this->model->errors)->hasntKey('password');
-    }
 
 }
